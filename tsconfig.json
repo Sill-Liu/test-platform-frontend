@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 编译目标 ES 版本
+    "module": "ESNext", // 模块系统
+    "moduleResolution": "Node", // 模块解析方式（关键）
+    "jsx": "react-jsx", // 核心：设置 JSX 编译模式（解决报错）
+    "strict": true, // 开启严格模式（可选，推荐）
+    "esModuleInterop": true, // 兼容 ES 模块和 CommonJS
+    "skipLibCheck": true, // 跳过库文件类型检查
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+    "baseUrl": "./", // 基础路径
+    "paths": {
+      "@/*": ["src/*"] // 可选：路径别名（方便导入）
+    }
+  },
+  "include": ["src/**/*"], // 包含 src 下所有 ts/tsx 文件
+  "exclude": ["node_modules"] // 排除 node_modules
+}

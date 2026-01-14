@@ -1,0 +1,135 @@
+/* ========== 基础样式重置 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* ========== 全局明暗模式基础样式 ========== */
+/* 白天模式（默认） */
+:root {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-primary: #e5e7eb;
+}
+
+/* 黑夜模式（根元素添加dark类） */
+.dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-primary: #374151;
+}
+
+/* 全局容器样式 */
+#root {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ========== 富文本编辑器兜底样式（优先级最高） ========== */
+/* 覆盖@uiw/react-md-editor默认样式 */
+.w-md-editor {
+  --w-md-editor-bg-color: transparent !important;
+  --w-md-editor-text-color: inherit !important;
+  --w-md-editor-toolbar-bg-color: transparent !important;
+  --w-md-editor-toolbar-text-color: inherit !important;
+  --w-md-editor-border-color: transparent !important;
+}
+
+/* 富文本编辑区/预览区兜底 */
+.w-md-editor-text-input,
+.w-md-editor-text-pre > code {
+  background-color: inherit !important;
+  color: inherit !important;
+  caret-color: inherit !important;
+}
+
+/* 富文本工具栏兜底 */
+.w-md-editor-toolbar {
+  background-color: inherit !important;
+  border-bottom-color: inherit !important;
+}
+
+.w-md-editor-toolbar button {
+  color: inherit !important;
+}
+
+/* 移除富文本默认的紫色高亮边框 */
+.w-md-editor-toolbar button:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.dark .w-md-editor-toolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ========== BugManagement组件通用样式 ========== */
+/* 按钮通用样式 */
+button {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 输入框/选择框通用样式 */
+input,
+select,
+textarea {
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 1px #3b82f6 !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 1px #60a5fa !important;
+}
+
+/* 表格通用样式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--border-primary);
+  padding: 0.5rem;
+}
+
+th {
+  font-weight: 600;
+  text-align: left;
+  background-color: var(--bg-secondary);
+}
+
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.dark tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}

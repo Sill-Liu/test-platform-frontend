@@ -1,0 +1,67 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "overview": {
+      "totalProjects": 8,
+      "totalRequirements": 42,
+      "totalBugs": 15,
+      "totalTasks": 28,
+      "completedRequirements": 27,
+      "closedBugs": 9,
+      "completedTasks": 19,
+      "progressRate": 68.5
+    },
+    "iterationTrend": [
+      { "name": "2026-01", "progress": 95 },
+      { "name": "2026-02", "progress": 88 },
+      { "name": "2026-03", "progress": 75 },
+      { "name": "2026-04", "progress": 68 },
+      { "name": "2026-05", "progress": 45 },
+      { "name": "2026-06", "progress": 10 }
+    ],
+    "requirementTypeDistribution": [
+      { "name": "产品需求", "value": 18 },
+      { "name": "任务", "value": 14 },
+      { "name": "工具需求", "value": 7 },
+      { "name": "问题反馈", "value": 3 }
+    ],
+    "bugStatusDistribution": [
+      { "name": "未解决", "value": 6 },
+      { "name": "已解决", "value": 5 },
+      { "name": "已关闭", "value": 4 }
+    ],
+    "pendingItems": [
+      {
+        "id": "req_3001",
+        "title": "用户登录流程优化",
+        "type": "需求",
+        "deadline": "2026-01-20"
+      },
+      {
+        "id": "bug_4001",
+        "title": "移动端表单提交失败",
+        "type": "缺陷",
+        "deadline": "2026-01-18"
+      },
+      {
+        "id": "task_5001",
+        "title": "接口文档更新",
+        "type": "任务",
+        "deadline": "2026-01-19"
+      },
+      {
+        "id": "req_3002",
+        "title": "数据导出功能优化",
+        "type": "需求",
+        "deadline": "2026-01-22"
+      },
+      {
+        "id": "bug_4002",
+        "title": "报表统计数据错误",
+        "type": "缺陷",
+        "deadline": "2026-01-17"
+      }
+    ]
+  }
+}
